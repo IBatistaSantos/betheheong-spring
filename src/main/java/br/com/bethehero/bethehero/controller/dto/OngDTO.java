@@ -1,11 +1,13 @@
-package br.com.bethehero.bethehero.domain.entities;
+package br.com.bethehero.bethehero.controller.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@AllArgsConstructor
+@Getter
 @Builder
-public class Ong {
+public class OngDTO {
     private Long id;
     private String name;
     private String email;
