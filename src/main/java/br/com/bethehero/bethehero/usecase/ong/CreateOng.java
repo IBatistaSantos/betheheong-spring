@@ -2,6 +2,7 @@ package br.com.bethehero.bethehero.usecase.ong;
 
 import br.com.bethehero.bethehero.domain.entities.Ong;
 import br.com.bethehero.bethehero.gateway.OngGateway;
+import br.com.bethehero.bethehero.gateway.presenters.OngPresenters;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +12,9 @@ public class CreateOng {
 
     OngGateway ongGateway;
 
-    public void execute(Ong ong) {
+    public Ong execute(Ong ong) {
         ongGateway.verifyIfOngExists(ong.getName());
-        ongGateway.createOng(ong);
+        return ongGateway.createOng(ong);
+
     }
 }
