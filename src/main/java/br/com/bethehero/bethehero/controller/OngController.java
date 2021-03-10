@@ -18,7 +18,8 @@ public class OngController {
     private CreateOng createOng;
 
     @PostMapping()
-    public void createOng(@RequestBody OngDTO ongDTO) {
-        createOng.execute(OngPresenterController.toDomain(ongDTO));
+    public OngDTO createOng(@RequestBody OngDTO ongDTO) {
+        Ong ongCreated = createOng.execute(OngPresenterController.toDomain(ongDTO));
+        return OngPresenterController.toDTO(ongCreated);
     }
 }
