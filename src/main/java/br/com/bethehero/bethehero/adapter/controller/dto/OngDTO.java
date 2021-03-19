@@ -1,4 +1,4 @@
-package br.com.bethehero.bethehero.controller.dto;
+package br.com.bethehero.bethehero.adapter.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,9 +8,10 @@ import lombok.Getter;
 @Getter
 @Builder
 public class OngDTO {
-    private Long id;
+    private String id;
     private String name;
     private String email;
+    private String password;
     private String whatsapp;
     private String city;
     private String UF;

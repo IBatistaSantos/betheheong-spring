@@ -1,4 +1,4 @@
-package br.com.bethehero.bethehero.exception;
+package br.com.bethehero.bethehero.application.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

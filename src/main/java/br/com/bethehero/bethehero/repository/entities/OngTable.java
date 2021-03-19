@@ -5,9 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Data
@@ -19,14 +21,16 @@ import javax.persistence.*;
 public class OngTable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @Column(nullable = false, unique = true)
     private String name;
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false)
+    private String password;
 
     @Column(nullable = false)
     private String whatsapp;

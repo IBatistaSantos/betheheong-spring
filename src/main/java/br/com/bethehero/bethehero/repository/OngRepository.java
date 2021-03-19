@@ -8,6 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface OngRepository extends JpaRepository<OngTable, Long> {
+    Optional<OngTable> findByEmailOrName(String email, String name);
 
-    Optional<OngTable> findByName(String name);
 }

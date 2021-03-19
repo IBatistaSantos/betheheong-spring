@@ -1,4 +1,4 @@
-package br.com.bethehero.bethehero.exception;
+package br.com.bethehero.bethehero.application.exception;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
