@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface OngRepository extends JpaRepository<OngTable, Long> {
+public interface OngRepository extends JpaRepository<OngTable, String> {
     Optional<OngTable> findByEmailOrName(String email, String name);
 
 }
